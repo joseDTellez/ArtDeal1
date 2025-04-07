@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArtDeal - Bienvenido</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="main-content">
+    <div class="navbar">
+      <div class="logo">ArtDeal</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Mi Espacio</a></li>
+        <li><a href="explorar.html">Explorar</a></li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="comunidad.html">Comunidad</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button class="register-btn"><a href="registro.html">Regístrate</a></button>
+        <button class="login-btn"><a href="login.html">Iniciar Sesión</a></button>
+      </div>
+      <div class="language-selector">
+        <i class="fas fa-globe"></i> <!-- Ícono del globo -->
+        <span>Español, latino</span>
+      </div>
+    </div>
+    <div class="sectionPrincipal">
+      <img src="imagenes/art_portafolio.png" alt="Descripción de la imagen">
+      <div class="overlay">
+        <span>Explora el portafolio de artistas y descubre obras únicas disponibles para compra o colaboración. Encuentra piezas exclusivas y conecta directamente con los creadores para cerrar acuerdos y proyectos.</span>
+      </div>
+    </div>
+    <button class="cta-btn"><a href="portafolio.html">ÉCHALES UN VISTAZO</a></button>
+
+
+    <section class="section">
+      <h2>DEALS</h2>
+      <img src="imagenes/deals.png" alt="Paintings" />
+    </section>
+
+    <section class="section">
+      <h2>COMUNIDAD</h2>
+      <img src="imagenes/comunidad.png" alt="Puzzles" />
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+        <p class="footer-description">
+          Esta página es una demostración de cómo podría quedar la página web con diseño atómico.
+        </p>
+        <p class="footer-credits">2025 Jhon Jairo Vargas - José Daniel Téllez</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Ventana emergente de cookies -->
+  <div class="cookie-popup" id="cookiePopup">
+    <div class="VentanaCookies">
+      <img src="imagenes/cookie.png" alt="Cookie" class="cookie-img" />
+    <p>
+      Usamos cookies para mejorar tu experiencia en ArtDeal. Algunas son esenciales para el funcionamiento del sitio, mientras que otras nos ayudan a analizar el uso y personalizar contenido. ¿Aceptas el uso de cookies?
+    </p>
+    <div class="cookie-buttons">
+      <button onclick="handleCookie(true)">ACEPTAR</button>
+      <button onclick="handleCookie(false)">RECHAZAR</button>
+    </div>
+    </div>
+    
+  </div>
+
+  <script>
+    function handleCookie(accepted) {
+      document.getElementById("cookiePopup").style.display = "none";
+    }
+
+    window.onload = () => {
+      document.getElementById("cookiePopup").style.display = "flex";
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+.VentanaCookies {
+  background-color: #ddd;
+  color: #333;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navbar {
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  color: #8b0015;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #8b0015;
+  margin-top: 5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-buttons .register-btn {
+  background-color: #8b0015;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-buttons .register-btn:hover {
+  background-color: #a31c2c;
+}
+
+.nav-buttons .login-btn {
+  background-color: #ffe6e6;
+  color: #8b0015;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons .login-btn:hover {
+  background-color: #ffd6d6;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.language-selector i {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.header {
+  height: 10vh;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding: 2rem;
+}
+
+.header-content {
+  position: relative;
+  max-width: 600px;
+  margin-top: 100px;
+}
+
+.header-content h2 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+.cta-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8A0012;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.cta-btn:hover {
+  background-color: #a31c2c;
+}
+
+.section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.section h2 {
+  background-color: #8b0015;
+  color: white;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.section img {
+  width: 50%;
+  max-width: 10000px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+.sectionPrincipal {
+  position: relative;
+  margin-top: 3.5%;
+}
+
+.sectionPrincipal img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+  transition: filter 0.3s ease;
+}
+
+.sectionPrincipal:hover img {
+  filter: brightness(0.8);
+}
+
+.sectionPrincipal .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.sectionPrincipal:hover .overlay {
+  opacity: 1;
+}
+
+.sectionPrincipal .overlay span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  background-color: #8b0015;
+  color: white;
+  text-align: left;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  color: #f5f5f5;
+  max-width: 600px;
+  text-align: left;
+}
+
+.footer-credits {
+  font-size: 0.8rem;
+  color: #f5f5f5;
+}
+
+.cookie-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  z-index: 1000;
+}
+
+.cookie-img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.cookie-popup p {
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cookie-buttons button {
+  padding: 0.5rem 1.5rem;
+  background-color: #8b0015;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-buttons button:hover {
+  background-color: #a31c2c;
+}
+
+.nav-buttons button {
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.nav-buttons .register-btn {
+  background-color: #8b0015;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons .register-btn:hover {
+  background-color: #a31c2c;
+}
+
+.nav-buttons .login-btn {
+  background-color: #ffe6e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons .login-btn:hover {
+  background-color: #ffd6d6;
+}
+
+.nav-buttons button a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+}
+
+.nav-buttons .login-btn a {
+  color: #8b0015;
+}
+
+.cta-btn {
+  background-color: #8b0015;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.cta-btn:hover {
+  background-color: #a31c2c;
+}

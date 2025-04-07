@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArtDeal - Bienvenido</title>
+  <link rel="stylesheet" href="cookies.css" />
+</head>
+<body>
+  <!-- Contenido de fondo (simulado) -->
+  <div class="main-content">
+    <header class="header">
+      <h1>ArtDeal</h1>
+      <p>PORTFOLIO // JENNA DOE</p>
+      <h2>Art Portfolio</h2>
+      <p>Here is where your presentation begins!</p>
+      <button>ÉCHALES UN VISTAZO</button>
+    </header>
+
+    <section class="section">
+      <h2>DEALS</h2>
+      <img src="https://i.imgur.com/jyVnkcn.jpg" alt="Paintings" />
+    </section>
+
+    <section class="section">
+      <h2>COMUNIDAD</h2>
+      <img src="https://i.imgur.com/SbYOaY5.jpg" alt="Puzzles" />
+    </section>
+
+    <footer class="footer">
+      <p>2025 Jon Jairo Vargas - José Daniel Téllez</p>
+    </footer>
+  </div>
+
+  <!-- Ventana emergente de cookies -->
+  <div class="cookie-popup" id="cookiePopup">
+    <img src="https://i.imgur.com/I7E29Uw.png" alt="Cookie" class="cookie-img" />
+    <p>
+      Usamos cookies para mejorar tu experiencia en ArtDeal. Algunas son esenciales para el funcionamiento del sitio, mientras que otras nos ayudan a analizar el uso y personalizar contenido. ¿Aceptas el uso de cookies?
+    </p>
+    <div class="cookie-buttons">
+      <button onclick="handleCookie(true)">ACEPTAR</button>
+      <button onclick="handleCookie(false)">RECHAZAR</button>
+    </div>
+  </div>
+
+  <script>
+    function handleCookie(accepted) {
+      document.getElementById("cookiePopup").style.display = "none";
+    }
+
+    window.onload = () => {
+      document.getElementById("cookiePopup").style.display = "flex";
+    };
+  </script>
+</body>
+</html>

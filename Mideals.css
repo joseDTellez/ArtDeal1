@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+}
+
+.navbar {
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  color: #8b0015;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #8b0015;
+  margin-top: 5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-buttons .register-btn {
+  background-color: #8b0015;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-buttons .register-btn:hover {
+  background-color: #a31c2c;
+}
+
+.nav-buttons .login-btn {
+  background-color: #ffe6e6;
+  color: #8b0015;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons .login-btn:hover {
+  background-color: #ffd6d6;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.language-selector i {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.lang-close {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-close button {
+  background-color: #ffd6db;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.titulo-deals {
+  background-color: #941B2E;
+  color: white;
+  text-align: left;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.contenido-deal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.perfil-artista {
+  background-color: #941B2E;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 40px;
+  width: 300px;
+}
+
+.foto-artista {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.detalle-obra {
+  background-color: #ffe1ea;
+  padding: 1.5rem;
+  border-radius: 30px;
+  width: 300px;
+  text-align: center;
+}
+
+.imagen-obra {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.boton-oferta {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.boton-oferta button {
+  background-color: #941B2E;
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-contenido {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup-contenido input[type="text"] {
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 1rem 0;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-back,
+.btn-ofertar {
+  background-color: #941B2E;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+}
+
+.popup-toggle:checked ~ .popup {
+  display: flex;
+}
+
+.footer {
+  background-color: #8b0015;
+  color: white;
+  text-align: left;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  color: #f5f5f5;
+  max-width: 600px;
+  text-align: left;
+}
+
+.footer-credits {
+  font-size: 0.8rem;
+  color: #f5f5f5;
+}
+
+.popup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem;
+  background-color: #ffe1ea;
+}
+
+.popup-contenido {
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.popup-contenido input[type="number"] {
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-back,
+.btn-ofertar {
+  background-color: #941B2E;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back:hover,
+.btn-ofertar:hover {
+  background-color: #7a1626;
+}
+
+.btn-ofertar {
+  background-color: #8b0015;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.btn-ofertar a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.btn-ofertar:hover {
+  background-color: #a31c2c;
+}
