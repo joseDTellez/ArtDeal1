@@ -28,7 +28,7 @@
     </section>
 
     <footer class="footer">
-      <p>2025 Jon Jairo Vargas - José Daniel Téllez</p>
+      <p>2025 Jhon Jairo Vargas - José Daniel Téllez</p>
     </footer>
   </div>
 
@@ -46,12 +46,24 @@
 
   <script>
     function handleCookie(accepted) {
+      // Guardamos la elección en localStorage como string
+      localStorage.setItem("cookiesAccepted", accepted ? "true" : "false");
+      // Ocultamos el popup
       document.getElementById("cookiePopup").style.display = "none";
     }
-
+  
     window.onload = () => {
-      document.getElementById("cookiePopup").style.display = "flex";
+      // Leemos el valor guardado
+      const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+      // Solo mostramos el popup si no existe la clave o es diferente de "true" o "false"
+      if (cookiesAccepted !== "true" && cookiesAccepted !== "false") {
+        document.getElementById("cookiePopup").style.display = "flex";
+      } else {
+        // Por si acaso, ocultamos el popup si ya está guardado
+        document.getElementById("cookiePopup").style.display = "none";
+      }
     };
   </script>
+  
 </body>
 </html>

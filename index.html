@@ -77,12 +77,25 @@
 
   <script>
     function handleCookie(accepted) {
+      // Guardamos la elección en localStorage
+      localStorage.setItem("cookiesAccepted", accepted ? "true" : "false");
+      // Ocultamos el aviso
       document.getElementById("cookiePopup").style.display = "none";
     }
-
+  
     window.onload = () => {
-      document.getElementById("cookiePopup").style.display = "flex";
+      // Revisamos si ya se aceptaron o rechazaron cookies
+      const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+  
+      if (cookiesAccepted !== "true" && cookiesAccepted !== "false") {
+        // Si no se ha guardado decisión, mostramos el popup
+        document.getElementById("cookiePopup").style.display = "flex";
+      } else {
+        // Si ya se aceptaron o rechazaron, no mostramos nada
+        document.getElementById("cookiePopup").style.display = "none";
+      }
     };
   </script>
+  
 </body>
 </html>
