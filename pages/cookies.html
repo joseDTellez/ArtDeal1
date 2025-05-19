@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ArtDeal - Bienvenido</title>
-  <link rel="stylesheet" href="cookies.css" />
+  <!-- Ajusta la ruta al CSS desde /pages -->
+  <link rel="stylesheet" href="../cookies.css" />
 </head>
+
 <body>
   <!-- Contenido de fondo (simulado) -->
   <div class="main-content">
@@ -28,13 +31,13 @@
     </section>
 
     <footer class="footer">
-      <p>2025 Jon Jairo Vargas - José Daniel Téllez</p>
+      <p>2025 Jhon Jairo Vargas - José Daniel Téllez</p>
     </footer>
   </div>
 
   <!-- Ventana emergente de cookies -->
   <div class="cookie-popup" id="cookiePopup">
-    <img src="https://i.imgur.com/I7E29Uw.png" alt="Cookie" class="cookie-img" />
+    <img src="/assets/images/cookie.png" alt="Cookie" class="cookie-img" />
     <p>
       Usamos cookies para mejorar tu experiencia en ArtDeal. Algunas son esenciales para el funcionamiento del sitio, mientras que otras nos ayudan a analizar el uso y personalizar contenido. ¿Aceptas el uso de cookies?
     </p>
@@ -44,14 +47,7 @@
     </div>
   </div>
 
-  <script>
-    function handleCookie(accepted) {
-      document.getElementById("cookiePopup").style.display = "none";
-    }
-
-    window.onload = () => {
-      document.getElementById("cookiePopup").style.display = "flex";
-    };
-  </script>
+  <script src="../js/cookies.js"></script>
 </body>
+
 </html>
