@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ArtDeal - Bienvenido</title>
-  <link rel="stylesheet" href="cookies.css" />
+  <!-- Ajusta la ruta al CSS desde /pages -->
+  <link rel="stylesheet" href="../cookies.css" />
 </head>
+
 <body>
   <!-- Contenido de fondo (simulado) -->
   <div class="main-content">
@@ -34,7 +37,7 @@
 
   <!-- Ventana emergente de cookies -->
   <div class="cookie-popup" id="cookiePopup">
-    <img src="https://i.imgur.com/I7E29Uw.png" alt="Cookie" class="cookie-img" />
+    <img src="/assets/images/cookie.png" alt="Cookie" class="cookie-img" />
     <p>
       Usamos cookies para mejorar tu experiencia en ArtDeal. Algunas son esenciales para el funcionamiento del sitio, mientras que otras nos ayudan a analizar el uso y personalizar contenido. ¿Aceptas el uso de cookies?
     </p>
@@ -44,26 +47,7 @@
     </div>
   </div>
 
-  <script>
-    function handleCookie(accepted) {
-      // Guardamos la elección en localStorage como string
-      localStorage.setItem("cookiesAccepted", accepted ? "true" : "false");
-      // Ocultamos el popup
-      document.getElementById("cookiePopup").style.display = "none";
-    }
-  
-    window.onload = () => {
-      // Leemos el valor guardado
-      const cookiesAccepted = localStorage.getItem("cookiesAccepted");
-      // Solo mostramos el popup si no existe la clave o es diferente de "true" o "false"
-      if (cookiesAccepted !== "true" && cookiesAccepted !== "false") {
-        document.getElementById("cookiePopup").style.display = "flex";
-      } else {
-        // Por si acaso, ocultamos el popup si ya está guardado
-        document.getElementById("cookiePopup").style.display = "none";
-      }
-    };
-  </script>
-  
+  <script src="../js/cookies.js"></script>
 </body>
+
 </html>
